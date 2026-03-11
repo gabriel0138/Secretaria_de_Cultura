@@ -73,16 +73,26 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="flex flex-col px-4 py-2 space-y-2">
-                <a href="index.html" class="text-left py-2 text-blue-900 font-bold border-b">Início Institucional</a>
-                <a href="agenda.html" class="text-left py-2 text-gray-600 border-b">Agenda Cultural</a>
-                <a href="oficina-cultura.html" class="text-left py-2 text-gray-600 border-b">Oficina de Cultura</a>
-                <a href="artistas.html" class="text-left py-2 text-gray-600 border-b">Casa do Artesão</a>
-                <a href="casa-musica.html" class="text-left py-2 text-gray-600 border-b">Casa de Música</a>
-                <a href="casa-danca.html" class="text-left py-2 text-gray-600 border-b">Casa da Dança</a>
-                <a href="casa-cultura-suarao.html" class="text-left py-2 text-gray-600 border-b">Casa de Cultura do Suarão</a>
-                <a href="projeto-guri.html" class="text-left py-2 text-gray-600 border-b">Projeto Guri</a>
-                <a href="https://forms.gle/GjQ2LZG2HpwT55jLA" target="_blank" class="text-left py-2 text-gray-600">Cadastro de Artistas</a>
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 bg-blue-50">Início</a>
+                <a href="agenda.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Agenda Cultural</a>
+                
+                <div>
+                    <button id="mobile-spaces-btn" class="w-full flex justify-between items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                        <span>Espaços</span>
+                        <i id="mobile-spaces-icon" class="fas fa-chevron-down text-xs transition-transform"></i>
+                    </button>
+                    <div id="mobile-spaces-menu" class="hidden mt-1 space-y-1 pl-7">
+                        <a href="oficina-cultura.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Oficina de Cultura</a>
+                        <a href="artistas.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Casa do Artesão</a>
+                        <a href="casa-musica.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Casa de Música</a>
+                        <a href="casa-danca.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Casa da Dança</a>
+                        <a href="casa-cultura-suarao.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100">Casa de Cultura Suarão</a>
+                    </div>
+                </div>
+
+                <a href="projeto-guri.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projeto Guri</a>
+                <a href="https://forms.gle/GjQ2LZG2HpwT55jLA" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Cadastro de Artistas</a>
             </div>
         </div>
     </nav>
@@ -115,11 +125,8 @@
                         Berço da história nacional, terra de Anchieta e refúgio de belezas naturais preservadas.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                        <a href="agenda.html" class="px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-blue-900 rounded-full font-bold transition shadow-lg shadow-yellow-500/30 transform hover:-translate-y-1 inline-block">
+                        <a href="agenda.html" class="w-full sm:w-auto px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-blue-900 rounded-full font-bold transition shadow-lg shadow-yellow-500/30 transform hover:-translate-y-1 inline-block">
                             Ver Agenda Cultural
-                        </a>
-                        <a href="artistas.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-bold transition shadow-lg inline-block">
-                            Conhecer Nossos Artistas
                         </a>
                     </div>
                 </div>
@@ -256,12 +263,22 @@
     </button>
 
     <script>
-        // Script simples apenas para o menu mobile
+        // Mobile menu toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Dropdown
+        // Mobile dropdown for "Espaços"
+        const mobileSpacesBtn = document.getElementById('mobile-spaces-btn');
+        if (mobileSpacesBtn) {
+            mobileSpacesBtn.addEventListener('click', function() {
+                document.getElementById('mobile-spaces-menu').classList.toggle('hidden');
+                const icon = document.getElementById('mobile-spaces-icon');
+                icon.classList.toggle('rotate-180');
+            });
+        }
+
+        // Desktop Dropdown
         document.querySelectorAll('.dropdown').forEach(function(dropdown) {
             dropdown.addEventListener('click', function(event) {
                 event.stopPropagation();
