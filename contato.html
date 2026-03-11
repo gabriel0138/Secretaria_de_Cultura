@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Cultura Itanhaém</title>
+    <link rel="icon" href="favicon.jpeg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Montserrat', sans-serif; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-fixed bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="cultura.jpeg" alt="Brasão Cultura" class="w-12 h-12 rounded-xl shadow-lg shadow-blue-900/20 object-cover">
+                    <div>
+                        <h1 class="text-xl font-extrabold text-blue-900 leading-tight font-heading tracking-tight">Cultura Itanhaém</h1>
+                        <p class="text-xs text-gray-500 font-semibold tracking-wider">PREFEITURA MUNICIPAL</p>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-900 font-medium transition">Início</a>
+                    <a href="agenda.html" class="nav-link text-gray-600 hover:text-blue-900 font-medium transition">Agenda Cultural</a>
+                    
+                    <div class="relative dropdown">
+                        <button class="nav-link text-gray-600 hover:text-blue-900 font-medium transition inline-flex items-center">
+                            Espaços <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-lg mt-2 py-2 w-48 border border-gray-100 z-50">
+                            <a href="oficina-cultura.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-900">Oficina de Cultura</a>
+                            <a href="artistas.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-900">Casa do Artesão</a>
+                            <a href="casa-musica.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-900">Casa de Música</a>
+                            <a href="casa-danca.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-900">Casa da Dança</a>
+                            <a href="casa-cultura-suarao.html" class="block px-4 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-900">Casa de Cultura Suarão</a>
+                        </div>
+                    </div>
+
+                    <a href="projeto-guri.html" class="nav-link text-gray-600 hover:text-blue-900 font-medium transition">Projeto Guri</a>
+                    <a href="https://forms.gle/GjQ2LZG2HpwT55jLA" target="_blank" class="nav-link text-gray-600 hover:text-blue-900 font-medium transition">Cadastro de Artistas</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="flex flex-col px-4 py-2 space-y-2">
+                <a href="index.html" class="text-left py-2 text-gray-600 border-b">Início Institucional</a>
+                <a href="agenda.html" class="text-left py-2 text-gray-600 border-b">Agenda Cultural</a>
+                <a href="oficina-cultura.html" class="text-left py-2 text-gray-600 border-b">Oficina de Cultura</a>
+                <a href="artistas.html" class="text-left py-2 text-gray-600 border-b">Casa do Artesão</a>
+                <a href="casa-musica.html" class="text-left py-2 text-gray-600 border-b">Casa de Música</a>
+                <a href="casa-danca.html" class="text-left py-2 text-gray-600 border-b">Casa da Dança</a>
+                <a href="casa-cultura-suarao.html" class="text-left py-2 text-gray-600 border-b">Casa de Cultura do Suarão</a>
+                <a href="projeto-guri.html" class="text-left py-2 text-gray-600 border-b">Projeto Guri</a>
+                <a href="https://forms.gle/GjQ2LZG2HpwT55jLA" target="_blank" class="text-left py-2 text-gray-600">Cadastro de Artistas</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow fade-in container mx-auto px-4 py-12 text-center">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <!-- Informações de Contato -->
+            <div class="text-left">
+                <h2 class="text-3xl sm:text-4xl font-extrabold mb-6 font-heading text-blue-900">Fale Conosco</h2>
+                <p class="text-gray-600 mb-8">Estamos à disposição para atender a população, artistas e turistas. Entre em contato pelos canais oficiais.</p>
+                
+                <div class="bg-white/80 backdrop-blur-md border border-white/40 p-6 sm:p-8 rounded-3xl shadow-xl shadow-blue-900/5 mb-8">
+                    <h3 class="text-xl font-bold mb-6 text-blue-900 border-b pb-3">Secretaria de Cultura e Economia Criativa</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full text-blue-600 mr-4"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <p class="font-bold text-gray-800">Endereço</p>
+                                <p class="text-gray-600">Rua Antônio Olívio de Araújo, 5 - Centro</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full text-blue-600 mr-4"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <p class="font-bold text-gray-800">Horário de Atendimento</p>
+                                <p class="text-gray-600">Segunda a Sexta, das 09h às 16h</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full text-blue-600 mr-4"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <p class="font-bold text-gray-800">Telefone</p>
+                                <p class="text-gray-600">(13) 3427-5573</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário de Cadastro de Artistas -->
+            <div class="text-left">
+                <div class="bg-blue-900 text-white p-6 sm:p-8 rounded-t-3xl relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold font-heading relative z-10">Cadastro de Artistas</h2>
+                    <p class="text-blue-200 text-sm mt-2 relative z-10">Faça parte do nosso Banco de Talentos ou da Casa do Artesão.</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur-md border border-white/40 border-t-0 p-6 sm:p-8 rounded-b-3xl shadow-xl shadow-blue-900/5">
+                    <form action="mailto:cultura@itanhaem.sp.gov.br" method="post" enctype="text/plain" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Nome Completo</label>
+                            <input type="text" name="nome" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition" placeholder="Seu nome">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Área de Atuação</label>
+                            <select name="area" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition">
+                                <option>Artesanato</option>
+                                <option>Música</option>
+                                <option>Artes Plásticas</option>
+                                <option>Dança</option>
+                                <option>Teatro</option>
+                                <option>Prestação de Serviços (Eventos)</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">WhatsApp</label>
+                                <input type="tel" name="whatsapp" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition" placeholder="(13) 99999-9999">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">E-mail</label>
+                                <input type="email" name="email" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition" placeholder="seu@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Breve Descrição / Link do Portfólio</label>
+                            <textarea name="mensagem" rows="3" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition" placeholder="Conte um pouco sobre seu trabalho ou cole um link..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-4 rounded-xl shadow-lg shadow-yellow-500/30 transition transform hover:-translate-y-1">
+                            Enviar Cadastro
+                        </button>
+                        <p class="text-xs text-gray-400 text-center mt-2">Ao clicar, seu gerenciador de e-mail será aberto.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12 mt-auto relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500"></div>
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            <div>
+                <h3 class="text-xl font-bold mb-4 font-heading">Secretaria de Cultura</h3>
+                <p class="text-blue-200 text-sm mb-4">Preservando a história e fomentando o futuro da segunda cidade mais antiga do Brasil.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-blue-300"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="hover:text-blue-300"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-yellow-400">Links Úteis</h4>
+                <ul class="space-y-2 text-blue-200 text-sm">
+                    <li><a href="agenda.html" class="hover:text-white">Agenda Cultural</a></li>
+                    <li><a href="artistas.html" class="hover:text-white">Casa do Artesão</a></li>
+                    <li><a href="contato.html" class="hover:text-white">Cadastro de Artistas</a></li>
+                    <li><a href="projeto-guri.html" class="hover:text-white">Projeto Guri</a></li>
+                    <li><a href="#" class="hover:text-white">Transparência</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-yellow-400">Atendimento</h4>
+                <ul class="space-y-2 text-blue-200 text-sm">
+                    <li><a href="https://www.google.com/maps/search/?api=1&query=Rua+Antonio+Olivio+de+Araujo+5+Centro+Itanhaem" target="_blank" class="hover:text-white transition"><i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i> Rua Antônio Olívio de Araújo, 5 - Centro</a></li>
+                    <li><a href="#" class="hover:text-white"><i class="fab fa-whatsapp mr-2 text-yellow-500"></i> WhatsApp da Cultura (Em Breve)</a></li>
+                    <li><a href="tel:1334275573" class="hover:text-white transition"><i class="fas fa-phone mr-2 text-yellow-500"></i> (13) 3427-5573</a></li>
+                    <li><a href="mailto:cultura@itanhaem.sp.gov.br" class="hover:text-white transition"><i class="fas fa-envelope mr-2 text-yellow-500"></i> cultura@itanhaem.sp.gov.br</a></li>
+                    <li><a href="mailto:cultura@educaita.com.br" class="hover:text-white transition"><i class="fas fa-envelope mr-2 text-yellow-500"></i> cultura@educaita.com.br</a></li>
+                    <li class="mt-2 text-xs text-blue-300">Segunda a Sexta, das 09h às 16h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-blue-800 mt-8 pt-6 text-center text-blue-300 text-sm">
+            <p>&copy; 2026 Prefeitura Municipal de Itanhaém.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 bg-blue-900/90 backdrop-blur text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-800 transition-all duration-300 opacity-0 invisible z-50 transform translate-y-4 flex items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Dropdown
+        document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+            dropdown.addEventListener('click', function(event) {
+                event.stopPropagation();
+                this.querySelector('.dropdown-menu').classList.toggle('hidden');
+            });
+        });
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.add('hidden'));
+        });
+
+        // Script Voltar ao Topo
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>
